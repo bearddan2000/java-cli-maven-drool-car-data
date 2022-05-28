@@ -1,0 +1,10 @@
+package rules
+
+import example.model.Car
+
+rule "Car year prior to 2010"
+  when
+    car : Car(year<2020)
+  then
+    car.setPrice(1.00);
+  end
